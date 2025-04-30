@@ -1,0 +1,231 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    color: #eee;
+    line-height: 1.6;
+  }
+ 
+  /* === HEADER === */
+  header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1f1f1f, #292929);
+    border-bottom: 1px solid #333;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  header h1 {
+    font-size: 2rem;
+    color: #00ff88;
+  }
+  header p {
+    margin-top: 0.5rem;
+    color: #bbb;
+  }
+  nav {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  nav a {
+    color: #eee;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  nav a:hover {
+    background: #00ff88;
+    color: #111;
+  }
+ 
+  /* === SECTIONS === */
+  .section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00ff88;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    background: #1d1d1d;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .card:hover {
+    background: #2c2c2c;
+    transform: translateY(-10px);
+  }
+ 
+  /* === SCHEDULE GRID === */
+  .schedule-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  .schedule {
+    background: #1d1d1d;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #333;
+  }
+  .schedule ul {
+    list-style: none;
+  }
+  .schedule li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+  }
+ 
+  /* === ACCORDION === */
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .accordion-item {
+    background: #1d1d1d;
+    border: 1px solid #333;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .accordion-header {
+    width: 100%;
+    padding: 1rem;
+    background: #222;
+    text-align: left;
+    border: none;
+    font-size: 1.2rem;
+    color: #00ff88;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .accordion-header:hover {
+    background: #00ff88;
+    color: #111;
+  }
+  .accordion-body {
+    padding: 1rem;
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+  }
+ 
+  /* === CTA Section === */
+  .cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #00ff88, #009977);
+    border-radius: 2rem;
+    margin-top: 3rem;
+  }
+  .start-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #111;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .start-btn:hover {
+    background: #00ff88;
+    color: #111;
+  }
+ 
+  /* === FOOTER === */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #666;
+  }
+ 
+  /* === REVEAL ON SCROLL === */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  /* === RESPONSIVE DESIGN FOR MOBILE DEVICES === */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-header {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .start-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+ 
+  /* === ANIMATIONS === */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
